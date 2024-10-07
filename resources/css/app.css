@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        font-family: 'Figtree',sans-serif;
+    }
+    .cart-container::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    .cart-container::-webkit-scrollbar-track {
+        background-color: transparent;
+    
+    }
+    .cart-container::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 50px;
+    }
+    .section{
+        padding:0 10px;
+    }
+}
+
+@layer components{
+
+    .sec-container{
+        @apply max-w-[1460px] mx-auto w-full pt-20;
+    }
+        
+
+    .custom-input{
+        @apply block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300
+        placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm bg-white outline-none;
+    }
+
+    input[type="checkbox"]{
+        @apply rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500;
+    }
+
+    .button-gray{
+        @apply px-4 py-[5px] rounded-md bg-gray-200  hover:bg-gray-300 text-center;  
+        transition: ease 300ms;
+    }
+    .button-dark{
+        @apply px-4 py-2 rounded-md bg-gray-800 text-white font-medium text-center hover:bg-gray-700;
+        transition: ease 300ms;
+    }
+    .navlink{
+        @apply block w-full pl-3 pr-4 py-2 border-transparent text-left text-base font-medium
+        text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:text-gray-800
+        focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out cursor-pointer;
+    }
+
+    .error{
+        @apply text-xs text-red-500;
+    }
+    .active{
+        @apply bg-gray-100 rounded-md
+    }
+
+    .addButton{
+        @apply py-2 px-4 border border-transparent text-sm font-medium rounded-md  bg-gray-300 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500  duration-150 ease-in-out;
+    }
+}
